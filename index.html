@@ -1,74 +1,88 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />		
+		<title>WiperDog</title>
+		<script language="Javascript" type="text/javascript" src="js/jquery-1.4.1.js"></script>
+		<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
+		<script language="Javascript" type="text/javascript" src="js/jquery.socialbutton-1.9.1.js"></script>
+		<script language="Javascript" type="text/javascript" src="js/common.js"></script>
+		<link rel="stylesheet" href="css/common.css" type="text/css" />
+		<link rel="Stylesheet" href="css/cd.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Joti+One' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<h1 id="logBox" class="logBox"><span>WiperDog</span></h1>
+		<h2 id="wd-sun-box" class="wd-sun-box">
+			<div class="wd-sun-jp jpmsg"><span lang="ja">ころぽよ監視</span></div>
+			<div class="wd-sun-en enmsg"><span lang="en">Waffy Watcher</span></div>
+		</h2>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Wiperdog.github.io : " />
+		<div id="cloud" class="cloud"></div>
+		<div class="wrapper">
+				<h3 class="cd-explain">
+					<span class="jpmsg" lang="ja">リリースまであと</span>
+					<span class="enmsg" lang="en">COMING SOON</span>
+				</h3>
+				<div id="countdown_dashboard">
+					<div class="dash weeks_dash">
+						<span class="dash_title">weeks</span>
+						<div class="digit">0</div>
+						<div class="digit">0</div>
+					</div>
+					<div class="dash days_dash">
+						<span class="dash_title">days</span>
+						<div class="digit">0</div>
+						<div class="digit">0</div>
+					</div>
+					<div class="dash hours_dash">
+						<span class="dash_title">hours</span>
+						<div class="digit">0</div>
+						<div class="digit">0</div>
+					</div>
+					<div class="dash minutes_dash">
+						<span class="dash_title">minutes</span>
+						<div class="digit">0</div>
+						<div class="digit">0</div>
+					</div>
+					<div class="dash seconds_dash">
+						<span class="dash_title">seconds</span>
+						<div class="digit">0</div>
+						<div class="digit">0</div>
+					</div>
+				</div>
+				<h3 class="cd-feature-explain">
+					<span class="jpmsg" lang="ja">システムをころ走り、ぽよ～んと監視</span>
+					<span class="enmsg" lang="en">WiperDog will watch your system mildly</span></h3>
+				<ul class="feature">
+					<li>
+						<span class="jpmsg" lang="ja">システムのリソースデータを収集する<strong>監視フレームワーク</strong>を<strong>Groovy</strong>言語で構築。<strong>簡単導入、簡単カスタマイズを目指す</strong></span>
+						<span class="enmsg" lang="en">
+							is a <strong>monitoring flamework</strong> that collects <strong>system resource data</strong><br />
+							is written by <strong>Groovy</strong> for <strong>easy installation and customization</strong>
+						</span>
+					</li>
+					<li>
+						<span class="jpmsg" lang="ja"><strong>かんたん記述</strong>の監視Job</span>
+						<span class="enmsg" lang="en">provides a <strong>monitoring job easy to describe</strong></span>
+					</li>
+					<li>
+						<span class="jpmsg" lang="ja"><strong>MongoDB</strong>を採用した、<strong>設定不要</strong>のデータストア</span>
+						<span class="enmsg" lang="en">enables you to use <strong>data store without setting</strong> by adopting <strong>MongoDB</strong></span>
+					</li>
+					<li>
+						<span class="jpmsg" lang="ja"><strong>Wiki</strong>でカスタマイズできる<strong>監視画面</strong></span>
+						<span class="enmsg" lang="en">has <strong>monitoring screens</strong> you can customize with <strong>Wiki</strong></span>
+					</li>
+				</ul>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Wiperdog.github.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/wiperdog">View on GitHub</a>
-
-          <h1 id="project_title">Wiperdog.github.io</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+		</div>
+		<ul id="social">
+			<li class="hatena"></li>
+			<li class="facebook"></li>
+			<li class="tweet"></li>
+			<li class="google_plusone"></li>
+			<li class="evernote"></li>
+		</ul>
+	</body>
 </html>
