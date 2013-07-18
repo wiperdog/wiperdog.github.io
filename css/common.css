@@ -1,0 +1,163 @@
+html, body{
+	/*overflow:hidden;*/
+	background-color:#0185cf;
+	background-image : url(../images/bg-grass.png);
+	background-repeat: repeat-x;
+	background-position:center 320px;
+	padding:0;
+	margin:0;
+}
+body{
+	font-size:14px;
+	font-family: 'Lucida Grande',
+ 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+ Meiryo, メイリオ, sans-serif;
+}
+.logBox{
+	background-image : url(../images/wd-u.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size : auto 100%;
+	height : 400px;
+	position:relative;
+	z-index :2;
+	margin:0;
+	padding:0;
+}
+.logBox span{
+	display:none;
+}
+.wd-eyecatch div.enmsg{
+	margin-top:25%;
+}
+.wd-eyecatch p{
+	line-height: 30px;
+}
+.wd-eyecatch span{
+	display: none;
+}
+.wd-sun-box{
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:100px;
+	left:50%;
+	z-index : 3;
+	width: 250px;
+}
+.wd-sun-jp{
+	background-image : url(../images/bg-sun.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size : auto 100%;
+	height : 120px;
+}
+.wd-sun-en{
+	background-image : url(../images/bg-sun-en.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size : auto 100%;
+	height : 120px;
+}
+.wd-sun-box span{
+	display: none;
+}
+.cloud{
+	background-image : url(../images/bg-cloud.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	position:absolute;
+	top:80px;
+	left:0;
+	right:0;
+	height:160px;
+}
+.wrapper{
+	width:630px;
+	margin:auto;
+	margin-top:-40px;
+}
+.weeks_dash{
+	margin-left:0 !important;
+}
+.cd-explain{
+	text-align: right;
+	font-weight: bold;
+	color:#fff;
+    position: relative;
+    background: #e45533;
+    margin-bottom: 20px;	
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:6px;
+	-moz-transform: rotate(-8deg);
+	-webkit-transform: rotate(-8deg);
+	-o-transform: rotate(-8deg);
+	-ms-transform: rotate(-8deg);
+}
+
+.cd-explain:after {
+    content: '';
+    position: absolute;
+    border-top: 10px solid #e45533;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    bottom: -9px;
+    left: 25%;
+}
+.cd-feature-explain{
+	text-align: left;
+	font-size : 180%;
+	color:#226a44;
+	line-height: 1.4em;
+	color:#0185cf;
+	font-weight:bold;
+}
+
+.feature{
+	font-size : 140%;
+	color:#226a44;
+	line-height: 1.4em;
+	margin: auto !important;
+	padding: 0;
+	list-style: none;
+}
+.feature li{
+	margin-bottom: 14px;
+	padding-left:40px;
+	background-image: url(../images/list.png);
+	background-position: 4px 0;
+	background-size: 24px;
+	background-repeat: no-repeat;
+}
+.feature li strong{
+
+}
+.feature p{
+	font-size : 130%;
+	margin-bottom: 14px;
+}
+
+.jpmsg{
+	display: none;
+}
+
+#social {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+    display: block;
+    list-style: none;
+	margin: 0;
+	padding: 0;
+	padding-top:6px;
+	text-align: center;
+	background-color:rgba(255,255,255,0.3);
+	box-shadow:0 0 4px #025f93;
+	z-index : 4;
+}
+#social li {
+    display: inline-block;
+    vertical-align: middle;
+}
