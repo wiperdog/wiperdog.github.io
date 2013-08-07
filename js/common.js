@@ -6,47 +6,12 @@ $(window)
 	})
 	.load(function(){
 		if(!gbIsChangeMsg) init();
-	var psPageURL = 'http://wiperdog.org'
-	$('#social')
-		.find('.google_plusone')
-		.socialbutton('google_plusone',{
-			 button : "medium"
-			,url    : psPageURL
-			,count  : true
-		})
-		.end()
-		.find('.tweet',{
-			 button : "horizontal"
-			,url    : psPageURL
-		})
-		.socialbutton('twitter', {
-			button: 'horizontal'
-		})
-		.end()
-		.find('.evernote')
-		.socialbutton('evernote')
-		.find('.hatena')
-		.socialbutton('hatena',{
-			 button : "standard"
-			,url    : psPageURL
-			,title  : "Wiper Dog"
-		})
-		.find('.facebook')
-		.socialbutton('facebook_like', {
-			 button: 'button_count'
-			,url    : psPageURL
-		});
-		
-
 	})
 function init(){
-	if(browserOldIE()){
-		initOldIE();
-	}
 	var psLang = browserLanguage();
 	if(psLang === 'ja'){
-		$('.jpmsg').show();
-		$('.enmsg').hide();
+		$('.jpMsg').show();
+		$('.enMsg').hide();
 	}
 	$('#countdown_dashboard').countDown({
 		targetDate: {
@@ -58,25 +23,14 @@ function init(){
 			'sec': 		0
 		}
 	});
-	gjCloud = $('#cloud');
+	var c = $('#cloud-box');
+	c.css({
+		'left' : $(window).width()
+		,'display' : 'block'
+	});
+	animateCloud();
 	//animateGrass();
 	gbIsChangeMsg = true;
-}
-function initOldIE(){
-	var psLang     = browserLanguage();
-	var psSunImg   = (psLang === 'ja') ? 'bg-sun.png' : 'bg-sun-en.png';
-	var psSunClass = (psLang === 'ja') ? '.wd-sun-jp' : '.wd-sun-en';
-	$('#logBox')
-		.append('<img src="images/wd-u.png" style="width:500px;height:339px;margin:auto;display:block;" />')
-		.css('backgroundImage', 'none');
-	$('#wd-sun-box')
-		.find(psSunClass)
-		.append('<img src="images/' + psSunImg + '" style="width:140px;height:120px;display:block;float:right;" />')
-		.css('backgroundImage', 'none');
-}
-function browserOldIE(){
-	return ($.browser.msie && ($.browser.version*1) < 9) ? true : false;
-	
 }
 function browserLanguage() {
 	try {
@@ -93,5 +47,29 @@ function animateGrass(){
 	$('#grass').css('backgroundPosition', gnLeft + 'px top');
 	gjCloud.css('left', gnCloudLeft +'px');
 	if(gnCloudLeft > $(window).width()) gnCloudLeft = -1100;
-	setTimeout('animateGrass()', 50)
+	setTimeout('animateGrass()', 100)
+}
+var gnIsLimit = false;
+function animateCloud(){
+	var c = $('#cloud-box');
+	var pnLeft = c.position().left;
+	var pnTop  = c.position().top;
+	if(pnTop > 5){
+		gnIsLimit = true;
+	}
+	if(gnIsLimit){
+		pnTop -= 1;
+		if(pnTop === 0) gnIsLimit = false;
+	}else{
+		pnTop += 1;
+	}
+	c.css({
+		 'top'  : pnTop
+		,'left' : pnLeft-10
+	});
+	var pnWidth = c.width();
+	if((c.position().left*-1) > pnWidth){
+		c.css('left', $(window).width());
+	}
+	setTimeout('animateCloud()', 100)
 }
