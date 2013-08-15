@@ -40,6 +40,15 @@ function init(){
 	if(psLang === 'ja'){
 		$('.jpmsg').show();
 		$('.enmsg').hide();
+		$('.vimsg').hide();
+	} else if (psLang === 'vi') {
+		$('.jpmsg').hide();
+		$('.enmsg').hide();
+		$('.vimsg').show();
+	} else {
+		$('.jpmsg').hide();
+		$('.enmsg').show();
+		$('.vimsg').hide();
 	}
 	$('#countdown_dashboard').countDown({
 		targetDate: {
