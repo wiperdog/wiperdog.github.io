@@ -7,6 +7,7 @@
 		<script language="Javascript" type="text/javascript" src="js/jquery.socialbutton-1.9.1.js"></script>
 		<script language="Javascript" type="text/javascript" src="js/common.js"></script>
 		<script type="text/javascript" src="js/jquery.smallipop.min.js"></script>
+   		<link rel="stylesheet" href="css/colorbox.css" type="text/css"></link>
    		<link rel="stylesheet" href="css/jquery.smallipop.css" type="text/css" media="all" title="Screen"></link>
 		<link rel="stylesheet" href="css/common.css" type="text/css"></link>
 		<link rel="Stylesheet" href="css/cd.css" type="text/css"></link>
@@ -15,6 +16,12 @@
 		$(window).load(function(){
     			$('.smallipop').smallipop();
 		})
+		</script>
+		<script src="js/jquery.colorbox.js"></script>
+		<script>
+			$(document).ready(function(){
+		        $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+			});
 		</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -100,9 +107,9 @@
 					<span class="vimsg" lang="vi">Với <a href="http://www.mongodb.org/" target="_blank"> <strong> mongoDB</a></strong> có thể sử dụng<strong> kho dữ liệu mà không cần cài đặt  </strong> <strong></span>
 				</li>
 				<li>
-					<span class="jpmsg" lang="ja"><strong>Wiki</strong>でカスタマイズできる<strong>監視画面</strong></span>
-					<span class="enmsg" lang="en">has <strong>monitoring screens</strong> you can customize with <strong><span class="smallipop">Wiki<span class="smallipop-hint"><img src="images/WIKI_example_en.png" /></span></span></strong></span>
-					<span class="vimsg" lang="vi"> <strong>Có thể thay đổi </strong> màn hình giám sát bằng <strong><span class="smallipop">Wiki<span class="smallipop-hint"><img src="images/WIKI_example_en.png" /></span></span></strong></span>
+					<span class="jpmsg" lang="ja"><strong><a class='youtube' href="http://www.youtube.com/embed/n86eVWmu7qM?rel=0&amp;wmode=transparent">Wikiでカスタマイズ</a></strong>できる監視画面</span>
+					<span class="enmsg" lang="en">has monitoring screens <strong><a class='youtube' href="http://www.youtube.com/embed/n86eVWmu7qM?rel=0&amp;wmode=transparent">you can customize with Wiki</a></strong></span>
+					<span class="vimsg" lang="vi">Có thể thay đổi <strong><a class='youtube' href="http://www.youtube.com/embed/n86eVWmu7qM?rel=0&amp;wmode=transparent"> màn hình giám sát bằng Wiki</a></strong></span>
 				</li>
 			</ul>
 		</div>
