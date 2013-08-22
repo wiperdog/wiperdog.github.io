@@ -87,6 +87,10 @@ function browserOldIE(){
 	return false;
 }
 function browserLanguage() {
+        var pos = window.location.search.indexOf('lang=')
+        if (pos >= 0) {
+           return window.location.search.substring(pos + 5, pos + 7)
+	}
 	try {
 		return (navigator.browserLanguage || navigator.language || navigator.userLanguage).substr(0,2)
 	}catch(e) {
