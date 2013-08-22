@@ -166,6 +166,10 @@ a {
 	display: none;
 }
 
+.vimsg{
+	display: none;
+}
+
 #social {
 	position:fixed;
 	top:0;
