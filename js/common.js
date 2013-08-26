@@ -33,7 +33,7 @@ $(window)
 
 	})
 function init(){
-	if(browserOldIE()){
+	if(browserIsOldIE()){
 		initOldIE();
 	}
 	var psLang = browserLanguage();
@@ -81,10 +81,14 @@ function initOldIE(){
 		.append('<img src="images/' + psSunImg + '" style="width:140px;height:120px;display:block;float:right;" />')
 		.css('backgroundImage', 'none');
 }
-function browserOldIE(){
-	//return ($.browser.msie && ($.browser.version*1) < 9) ? true : false;
-	//return $.support.optSelected;
-	return false;
+function browserIsOldIE(){
+	var browserIE = false;//IE判定
+	var browser_v = 9;//IEバージョン番号
+	if (/*@cc_on!@*/false) {
+		browserIE = true;
+		if (navigator.userAgent.match(/MSIE (¥d¥.¥d+)/)) {browser_v = parseFloat(RegExp.$1);}//IE6.7.8
+	}
+	return (browser_v < 9) ? true : false;
 }
 function browserLanguage() {
         var pos = window.location.search.indexOf('lang=')
